@@ -14,6 +14,8 @@ namespace UserRegistration
 
             Console.WriteLine("-------Welcome To User Registration--------");
             Console.WriteLine();
+
+            string pattern = "[0-9]{1}"; //pattern for atleast 1numeric password 
             string pattern = "^[A-Z]{1}[a-z]{7,}$"; //pattern for password minimum 8 char.
             string pattern = "^[A-Za-z0-9]{8,}$"; //pattern for password minimum 8 char.
 
@@ -47,7 +49,7 @@ namespace UserRegistration
                 }
                 else
                 {
-                    Console.WriteLine("Enter minimum eight character and use atlest one Uppercase");
+                    Console.WriteLine("Enter atlest one numeric number");
                 }
 
             }
