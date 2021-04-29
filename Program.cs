@@ -14,6 +14,7 @@ namespace UserRegistration
 
             Console.WriteLine("-------Welcome To User Registration--------");
             Console.WriteLine();
+            string pattern = "^[A-Z]{1}[a-z]{7,}$"; //pattern for password minimum 8 char.
             string pattern = "^[A-Za-z0-9]{8,}$"; //pattern for password minimum 8 char.
 
             Program p = new Program(); // create object
@@ -46,11 +47,30 @@ namespace UserRegistration
                 }
                 else
                 {
+                    Console.WriteLine("Enter minimum eight character and use atlest one Uppercase");
+                }
+
+            }
+          
+        {
+            int i = 0; //initialize i value
+            while (i != 1)
+            {
+                Console.WriteLine("Enter Password");
+                string Password = Console.ReadLine();
+                bool result = regex.IsMatch(Password);  //call the IsMatch metod to determine whether a match is present
+
+                if (result == true)  ////check result is true or not using if and hence using bool
+                {
+                    Console.WriteLine("Valid password");
+                    i = 1;
+                }
+                else
+                {
                     Console.WriteLine("Enter minimum eight character");
                 }
 
             }
-
 
             string Pattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$"; //pattern using for email.
 
